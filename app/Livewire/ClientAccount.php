@@ -99,12 +99,7 @@ class ClientAccount extends Component
 
     public function headers(): array
     {
-        // return [
-        //     ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
-        //     ['key' => 'client.first_name', 'label' => 'Owner', 'class' => 'w-64'],
-        //     ['key' => 'account_number', 'label' => 'Account No', 'class' => 'w-20'],
-        //     ['key' => 'account_type', 'label' => 'Account Type', 'sortable' => false],
-        // ];
+
             return collect([
                 ['key' => 'id', 'label' => '#', 'class' => 'w-1'],
                 ['key' => 'client.first_name', 'label' => 'Owner', 'class' => 'w-64'],
@@ -305,8 +300,6 @@ public function exportToPDF()
             ->get()
             ->merge($selectedClient);
     }
-
-
 
     function generateAccountNumber()
     {

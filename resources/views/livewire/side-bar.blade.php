@@ -1,6 +1,6 @@
 
-<div>
-     <x-slot:sidebar drawer="main-drawer" collapsible class="h-full bg-base-200  mb-4  border-r-2">
+{{-- <div> --}}
+    <x-slot:sidebar drawer="main-drawer" collapsible class="h-full bg-base-200  mb-4  border-r-2">
             <button  @click.stop="$dispatch('mary-search-open')"  class="lg:hidden relative inline-flex items-center justify-center p-0.5 mb-2 me-2 ml-5 mt-5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
                 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                     Spotlight Search
@@ -125,5 +125,5 @@
                         <x-mary-menu-item title="FAQS"  icon="" link="" route="" class="text-sm" />
                     </x-mary-menu-sub>
                 </x-mary-menu>
-        </x-slot:sidebar>
-</div>
+    </x-slot:sidebar>
+{{-- </div> --}}

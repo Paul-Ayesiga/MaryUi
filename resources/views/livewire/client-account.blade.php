@@ -1,4 +1,4 @@
-<div style="height: 550px; overflow-y:scroll; overflow-x:hidden">
+<div  class="px-4 sm:px-8">
     <div class="breadcrumbs text-sm mb-2">
         <ul>
             <li><a>Home</a></li>
@@ -7,13 +7,13 @@
         </ul>
     </div>
 
-
     <br>
         <x-mary-header title="Overview of Accounts DataTable" class="text-4xl text-center mb-20"  separator progress-indicator ... >
             <x-slot:actions>
                 <x-mary-button label="Add Account" @click="$wire.addAccount = true"  icon="o-plus" class="bg-blue-700 dark:bg-blue-300 dark:text-black mb-3 text-white rounded-md mr-10" />
             </x-slot:actions>
         </x-mary-header>
+
         <div class="inline-flex flex-wrap">
             <x-mary-button label="Bulk?" icon="o-trash"  class="btn-error btn-sm  mx-3" wire:click="bulk" />
             <x-mary-button label="" icon="o-funnel"  class="btn-warning btn-sm mx-2 rounded-md"
@@ -81,6 +81,8 @@
                 </x-slot:actions>
             </x-mary-modal>
         {{-- end of bulk delete modal --}}
+
+
         <x-mary-table :headers="$headers" :rows="$accounts" :sort-by="$sortBy" with-pagination  per-page="perPage"
         :per-page-values="[1,3, 5, 10]"  wire:model="selected" selectable>
             {{-- Special `actions` slot --}}
